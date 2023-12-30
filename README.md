@@ -12,11 +12,12 @@ Successful response:
 
 `200 OK`
 
-- `time`: The time of the data point
-- `open`: The opening price of the stock
-- `close`: The closing price of the stock
-- `max`: The maximum price of the stock over the time period
-- `min`: The minimum price of the stock over the time period
+- Array of objects
+  - `time`: The time of the data point
+  - `open`: The opening price of the stock
+  - `close`: The closing price of the stock
+  - `max`: The maximum price of the stock over the time period
+  - `min`: The minimum price of the stock over the time period
 
 Unsuccessful response:
 
