@@ -1,9 +1,13 @@
-const port = 8080;
+import { Application } from 'abc';
+import Data from './data.ts';
 
-const handler = (_request: Request): Response => {
-  const body = 'Hello world';
+const data = new Data();
+const app = new Application();
 
-  return new Response(body, { status: 200 });
-};
+app
+  .get('/data/:symbol/:timeframe', async (ctx) => {
+    ctx.json(await data.get(ctx.params.symbol, ctx.params.timeframe));
+  })
+  .start({ port: 8080 });
 
-Deno.serve({ port }, handler);
+console.log('Listening on http://localhost:8080');

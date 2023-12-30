@@ -1,5 +1,9 @@
 {
   "tasks": {
-    "start": "deno run --allow-net main.ts"
+    "start": "deno run --allow-net --allow-read --allow-env main.ts"
+  },
+  "imports": {
+    "tradingview": "npm:@mathieuc/tradingview@3.4.2",
+    "abc": "https://deno.land/x/abc@v1.3.3/mod.ts"
   }
 }
