@@ -176,7 +176,8 @@
     }
   },
   "redirects": {
-    "https://deno.land/x/abc/mod.ts": "https://deno.land/x/abc@v1.3.3/mod.ts"
+    "https://deno.land/x/abc/mod.ts": "https://deno.land/x/abc@v1.3.3/mod.ts",
+    "https://deno.land/x/rutt/mod.ts": "https://deno.land/x/rutt@0.2.0/mod.ts"
   },
   "remote": {
     "https://deno.land/std@0.99.0/_util/assert.ts": "2f868145a042a11d5ad0a3c748dcf580add8a0dbc0e876eaa0026303a5488f58",
@@ -235,6 +236,7 @@
     "https://deno.land/x/abc@v1.3.3/vendor/https/deno.land/std/mime/multipart.ts": "54ae11cbdb7f97b70e604126dab62b95d5943ffedcd297299ad3971a40729091",
     "https://deno.land/x/abc@v1.3.3/vendor/https/deno.land/std/path/mod.ts": "58a5045f107db66313b8b07babc2072a3ff10d4f34df7d826979ae3998c12f7d",
     "https://deno.land/x/abc@v1.3.3/vendor/https/deno.land/x/router/mod.ts": "a12a329c0b5d04e409fc7ad9f202fd3f78ed494e0236c04eba98a02e69731707",
-    "https://deno.land/x/router@v2.0.0/mod.ts": "8792d3c390e0446d89eb94ee8030dd20de18f2aba649e263d2832f3f150ea2ce"
+    "https://deno.land/x/router@v2.0.0/mod.ts": "8792d3c390e0446d89eb94ee8030dd20de18f2aba649e263d2832f3f150ea2ce",
+    "https://deno.land/x/rutt@0.2.0/mod.ts": "b467f38e8b927ddef2eb66e2c096e5e1f22837fcd0ce57b73517a23d4d365207"
   }
 }

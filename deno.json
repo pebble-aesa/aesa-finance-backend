@@ -4,6 +4,6 @@
   },
   "imports": {
     "tradingview": "npm:@mathieuc/tradingview@3.4.2",
-    "abc": "https://deno.land/x/abc@v1.3.3/mod.ts"
+    "rutt": "https://deno.land/x/rutt@0.2.0/mod.ts"
   }
 }

@@ -1,13 +1,16 @@
-import { Application } from 'abc';
+import { router } from 'rutt';
 import Data from './data.ts';
 
 const data = new Data();
-const app = new Application();
 
-app
-  .get('/data/:symbol/:timeframe', async (ctx) => {
-    ctx.json(await data.get(ctx.params.symbol, ctx.params.timeframe));
+await Deno.serve(
+  router({
+    '/data/:symbol/:timeframe': async (_req, _, { symbol, timeframe }) =>
+      new Response(JSON.stringify(await data.get(symbol, timeframe)), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }),
   })
-  .start({ port: 8080 });
-
-console.log('Listening on http://localhost:8080');
+).finished;
