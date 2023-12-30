@@ -10,6 +10,8 @@ Only `D`, `W`, and `M` timeframes are supported.
 
 Successful response:
 
+`200 OK`
+
 - `time`: The time of the data point
 - `open`: The opening price of the stock
 - `close`: The closing price of the stock
@@ -18,6 +20,4 @@ Successful response:
 
 Unsuccessful response:
 
-- `statusCode`: The HTTP status code
-- `error`: The error type
-- `message`: The error message
+`500 Internal Server Error`
