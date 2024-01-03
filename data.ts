@@ -1,10 +1,11 @@
 import TradingView from 'tradingview';
 
 export default class Data {
-  public get(symbol: string, timeframe: string): Promise<SymbolData[] | Error> {
-    return new Promise((resolve, reject) => {
-      const client = new TradingView.Client();
-      const chart = new client.Session.Chart();
+  private client = new TradingView.Client();
+
+  public get(symbol: string, timeframe: string): Promise<SymbolData[] | null> {
+    return new Promise((resolve) => {
+      const chart = new this.client.Session.Chart();
 
       chart.setMarket(symbol, {
         timeframe,
@@ -13,15 +14,17 @@ export default class Data {
       chart.onUpdate(() => {
         resolve(chart.periods);
         chart.delete();
-        client.end();
       });
 
       setTimeout(() => {
-        reject(new Error('Timeout'));
+        resolve(null);
         chart.delete();
-        client.end();
-      }, 3000);
+      }, 1000);
     });
+  }
+
+  public end() {
+    this.client.end();
   }
 }
 
