@@ -19,7 +19,7 @@ export default class Data {
       setTimeout(() => {
         resolve(null);
         chart.delete();
-      }, 1000);
+      }, 3000);
     });
   }
 

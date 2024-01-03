@@ -16,7 +16,7 @@ Successful response:
 
 - A dictionary
   - The keys are the symbols
-  - The values are arrays of objects, or null if the request to TradingView timed out (1000ms)
+  - The values are arrays of objects, or `null` if the request to TradingView timed out (3000ms)
     - `time`: The time of the data point
     - `open`: The opening price of the stock
     - `close`: The closing price of the stock
