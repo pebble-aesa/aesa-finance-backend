@@ -21,4 +21,5 @@ Successful response:
 
 Unsuccessful response:
 
-`500 Internal Server Error`
+- `status`: The status code (always 500)
+- `error`: The error message
